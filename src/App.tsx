@@ -161,35 +161,23 @@ export default function App() {
       setErrorMessage('');
       setSuccessMessage('');
 
-      const payload = {
+      const body = new URLSearchParams({
         nom: form.nom.trim(),
         telephone: form.telephone.trim(),
         email: form.email.trim(),
         service: form.service.trim(),
         zone: form.zone.trim(),
         message: form.message.trim(),
-      };
-
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
-        },
-        body: JSON.stringify(payload),
       });
 
-      const text = await response.text();
-
-      let result: { success?: boolean; error?: string } = {};
-      try {
-        result = JSON.parse(text);
-      } catch {
-        result = { success: response.ok };
-      }
-
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || "Erreur lors de l'envoi.");
-      }
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+        body: body.toString(),
+      });
 
       setForm(initialForm);
       setSuccessMessage('Votre demande a bien été envoyée.');
@@ -466,9 +454,7 @@ export default function App() {
                 {successMessage ? <div className="message success">{successMessage}</div> : null}
                 {errorMessage ? <div className="message error">{errorMessage}</div> : null}
 
-                <div className="message info">
-                  Les demandes de devis sont envoyées directement dans votre Google Sheet.
-                </div>
+                <div className="message info">Les demandes de devis sont envoyées directement dans votre Google Sheet.</div>
               </form>
             </div>
           </div>
