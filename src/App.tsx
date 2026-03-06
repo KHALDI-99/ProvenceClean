@@ -446,15 +446,15 @@ export default function App() {
               <div className="info-list">
                 <div className="info-card">
                   <span>Téléphone</span>
-                  <strong>06 XX XX XX XX</strong>
+                  <strong>07 84 72 81 14</strong>
                 </div>
                 <div className="info-card">
                   <span>E-mail</span>
-                  <strong>contact@cleanprovence.fr</strong>
+                  <strong>cleanprovence13000@gmail.com</strong>
                 </div>
                 <div className="info-card">
                   <span>Ville</span>
-                  <strong>Marseille</strong>
+                  <strong>Marseille et dans les environs</strong>
                 </div>
               </div>
             </div>
