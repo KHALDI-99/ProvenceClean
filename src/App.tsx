@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 
 const STORAGE_KEY = 'clean_provence_quotes';
 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx8Opa7gL9kw9JULYG5yeEaO6QifeY_KzgQYHxtzglrEbuhdHDWuZ3s0IOQNUqGfTws_Q/exec";
+
 type Quote = {
   id: string;
   date: string;
@@ -230,15 +232,53 @@ export default function App() {
     setForm((current) => ({ ...current, [name]: value }));
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
-    event.preventDefault();
-    const validationError = validateForm(form);
+async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
+  event.preventDefault();
 
-    if (validationError) {
-      setErrorMessage(validationError);
-      setSuccessMessage('');
-      return;
+  const validationError = validateForm(form);
+
+  if (validationError) {
+    setErrorMessage(validationError);
+    setSuccessMessage("");
+    return;
+  }
+
+  try {
+    setErrorMessage("");
+    setSuccessMessage("");
+
+    const payload = {
+      nom: form.nom.trim(),
+      telephone: form.telephone.trim(),
+      email: form.email.trim(),
+      service: form.service.trim(),
+      zone: form.zone.trim(),
+      message: form.message.trim(),
+    };
+
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      throw new Error(result.error || "Erreur lors de l'envoi.");
     }
+
+    setForm(initialForm);
+    setSuccessMessage("Votre demande a bien été envoyée.");
+    setErrorMessage("");
+  } catch (error) {
+    setSuccessMessage("");
+    setErrorMessage("Une erreur est survenue lors de l'envoi du formulaire.");
+    console.error(error);
+  }
+}
 
     const newQuote: Quote = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
