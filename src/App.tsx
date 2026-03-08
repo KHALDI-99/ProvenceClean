@@ -354,7 +354,7 @@ export default function App() {
           <div className="container">
             <div className="zones-top">
               <div>
-                <p> className="eyebrow">Zones d'intervention</p>
+                <p className="eyebrow">Zones d'intervention</p>
                 <h2>Présents à Marseille et dans les environs</h2>
               </div>
               <p className="zones-copy">
