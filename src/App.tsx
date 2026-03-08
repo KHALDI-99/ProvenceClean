@@ -235,7 +235,7 @@ export default function App() {
             <a href="#zones" onClick={() => setMenuOpen(false)}>
               Zones
             </a>
-            <a href="#contact" className="btn btn-dark" onClick={() => setMenuOpen(false)}>
+            <a href="#contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
               Demander un devis
             </a>
           </nav>
