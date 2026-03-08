@@ -358,9 +358,7 @@ export default function App() {
                 <h2>Présents à Marseille et dans les environs/h2>
               </div>
               <p className="zones-copy">
-                Vous êtes à Marseille ou dans une commune proche ? Clean Provence intervient rapidement pour vos besoins de nettoyage, que vous soyez un professionnel ou un particulier. Nous couvrons Marseille et de nombreuses villes aux alentours comme Aubagne, Allauch, Plan-de-Cuques, La Valentine, Cassis, La Ciotat, Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune et d’autres communes de la région.
-
-Grâce à notre proximité, nous pouvons planifier des interventions rapides et vous proposer un service de nettoyage fiable et professionnel. Où que vous soyez autour de Marseille, vous pouvez compter sur Clean Provence pour un travail soigné et un devis rapide.
+                Vous êtes à Marseille ou dans une commune proche ? Clean Provence intervient rapidement pour vos besoins de nettoyage, que vous soyez un professionnel ou un particulier. Nous couvrons Marseille et de nombreuses villes aux alentours comme Aubagne, Allauch, Plan-de-Cuques, La Valentine, Cassis, La Ciotat, Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune et d’autres communes de la région. Grâce à notre proximité, nous pouvons planifier des interventions rapides et vous proposer un service de nettoyage fiable et professionnel. Où que vous soyez autour de Marseille, vous pouvez compter sur Clean Provence pour un travail soigné et un devis rapide.
               </p>
             </div>
             <div className="zones-list">
