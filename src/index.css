@@ -1,6 +1,6 @@
 :root {
   --blue: #0f4c81;
-  --blue-2: #1f6ca8;
+  --blue-2: #1f6ca8;f
   --green: #76ad2f;
   --green-2: #8cc63e;
   --dark: #0f172a;
@@ -167,7 +167,7 @@ textarea {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--blue), var(--green));
-  color: #fff;
+  color: white;
   box-shadow: 0 14px 30px rgba(31, 108, 168, 0.16);
 }
 
