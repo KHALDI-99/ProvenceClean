@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbz3FEab5eAF8J73uz8GltvjL6raKv8bWWGvRnDRHiU2guvgeghimNUa-05jDuBjjUGuKA/exec';
+  'https://script.google.com/macros/s/AKfycbyXm4kRRRbPboUMkowJnnQDvI_kdAIT7bXTP_UGq4uH1zFlY75l4WApmn8Rc-cQsSI-rQ/exec';
 
 type QuoteFormState = {
   nom: string;
