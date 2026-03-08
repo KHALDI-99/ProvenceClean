@@ -293,8 +293,7 @@ export default function App() {
               <p className="eyebrow">Nos services</p>
               <h2>Des prestations simples, claires et professionnelles</h2>
               <p>
-                Un site vitrine efficace doit rassurer immédiatement. Chaque service est présenté clairement pour aider vos
-                visiteurs à comprendre en quelques secondes ce que vous proposez.
+                
               </p>
             </div>
             <div className="services-grid">
@@ -315,13 +314,10 @@ export default function App() {
               <p className="eyebrow green">À propos</p>
               <h2>Une entreprise locale qui mise sur la confiance</h2>
               <p className="body-large">
-                Clean Provence est pensée pour inspirer le sérieux, la propreté et la proximité. Le site reprend une identité
-                visuelle moderne et rassurante afin de valoriser l'image de l'entreprise auprès des clients particuliers comme
-                professionnels.
+                
               </p>
               <p className="body-large">
-                L'objectif est simple : montrer que vous êtes une entreprise fiable, bien organisée et prête à intervenir
-                rapidement avec une vraie exigence de qualité.
+             
               </p>
             </div>
             <div className="mini-grid">
@@ -354,11 +350,10 @@ export default function App() {
             <div className="zones-top">
               <div>
                 <p className="eyebrow">Zones d'intervention</p>
-                <h2>Présents à Marseille et dans les environs</h2>
+                <h2>Marseille + alentours/h2>
               </div>
               <p className="zones-copy">
-                Le site met en avant votre présence locale pour améliorer la confiance et faciliter la prise de contact des
-                prospects proches de votre secteur.
+                
               </p>
             </div>
             <div className="zones-list">
@@ -377,8 +372,7 @@ export default function App() {
               <p className="eyebrow green">Contact</p>
               <h2>Demandez votre devis</h2>
               <p className="body-large">
-                Le formulaire est pensé pour être simple, rassurant et rapide. Chaque demande est envoyée directement dans
-                votre Google Sheet pour centraliser les devis au même endroit.
+                
               </p>
 
               <div className="info-list">
@@ -388,11 +382,11 @@ export default function App() {
                 </div>
                 <div className="info-card">
                   <span>E-mail</span>
-                  <strong>cleanprovence13000@gmail.com</strong>
+                  <strong>provenceclean4@gmail.com</strong>
                 </div>
                 <div className="info-card">
                   <span>Ville</span>
-                  <strong>Marseille et dans les environs</strong>
+                  <strong>Marseille + alentours</strong>
                 </div>
               </div>
             </div>
@@ -463,7 +457,7 @@ export default function App() {
                 {successMessage ? <div className="message success">{successMessage}</div> : null}
                 {errorMessage ? <div className="message error">{errorMessage}</div> : null}
 
-                <div className="message info">Les demandes de devis sont envoyées directement dans votre Google Sheet.</div>
+                <div className="message info"></div>
               </form>
             </div>
           </div>
