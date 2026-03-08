@@ -358,7 +358,7 @@ export default function App() {
                 <h2>Présents à Marseille et dans les environs</h2>
               </div>
               <p className="zones-copy">
-                Vous êtes à Marseille ou dans une commune proche ? Clean Provence intervient pour vos besoins de nettoyage pour professionnels et particuliers à Marseille et dans les villes alentours comme Aubagne, Allauch, Cassis, La Ciotat, Gémenos ou Auriol, avec intervention rapide et devis gratuit.
+                Clean Provence intervient à Marseille et dans les villes alentours comme Aubagne, Allauch ou Cassis, ainsi que d’autres communes, avec intervention rapide et devis gratuit.
               </p>
             </div>
             <div className="zones-list">
