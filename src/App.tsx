@@ -291,9 +291,12 @@ export default function App() {
           <div className="container">
             <div className="section-head">
               <p className="eyebrow">Nos services</p>
-              <h2>Des prestations simples, claires et professionnelles</h2>
+              <h2>Entreprise de nettoyage professionnelle à Marseille</h2>
               <p>
-                
+                Clean Provence est une entreprise de nettoyage à Marseille spécialisée dans l’entretien pour professionnels et particuliers. 
+                Nous intervenons pour le nettoyage de bureaux, commerces, appartements, vitrines, locations Airbnb et le nettoyage de 
+                fin de chantier. Nos équipes assurent un travail soigné, rapide et efficace pour garantir des locaux propres et impeccables. 
+                Intervention à Marseille et aux alentours avec devis gratuit et service professionnel adapté à chaque besoin.
               </p>
             </div>
             <div className="services-grid">
@@ -312,9 +315,11 @@ export default function App() {
           <div className="container about-grid">
             <div>
               <p className="eyebrow green">À propos</p>
-              <h2>Une entreprise locale qui mise sur la confiance</h2>
+              <h2>Votre entreprise de nettoyage de confiance à Marseille</h2>
               <p className="body-large">
-                
+                Notre force repose sur quatre engagements : réactivité, avec des réponses rapides aux demandes de devis ; sérieux, avec un service professionnel et soigné ; 
+                proximité, grâce à notre ancrage local à Marseille ; et clarté, avec des prestations simples et transparentes pour faciliter la prise de contact.
+                Nous intervenons rapidement à Marseille et aux alentours avec un service fiable et un devis gratuit.
               </p>
               <p className="body-large">
              
@@ -350,10 +355,12 @@ export default function App() {
             <div className="zones-top">
               <div>
                 <p className="eyebrow">Zones d'intervention</p>
-                <h2>Marseille + alentours/h2>
+                <h2>Présents à Marseille et dans les environs/h2>
               </div>
               <p className="zones-copy">
-                
+                Vous êtes à Marseille ou dans une commune proche ? Clean Provence intervient rapidement pour vos besoins de nettoyage, que vous soyez un professionnel ou un particulier. Nous couvrons Marseille et de nombreuses villes aux alentours comme Aubagne, Allauch, Plan-de-Cuques, La Valentine, Cassis, La Ciotat, Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune et d’autres communes de la région.
+
+Grâce à notre proximité, nous pouvons planifier des interventions rapides et vous proposer un service de nettoyage fiable et professionnel. Où que vous soyez autour de Marseille, vous pouvez compter sur Clean Provence pour un travail soigné et un devis rapide.
               </p>
             </div>
             <div className="zones-list">
@@ -370,9 +377,11 @@ export default function App() {
           <div className="container contact-grid">
             <div>
               <p className="eyebrow green">Contact</p>
-              <h2>Demandez votre devis</h2>
+              <h2>Demandez votre devis GRATUIT !</h2>
               <p className="body-large">
-                
+                ous avez besoin d’un service de nettoyage à Marseille ou dans les environs ? Contactez Clean Provence pour obtenir un devis gratuit et rapide. Que ce soit pour le nettoyage de bureaux, d’appartements, de commerces, de locations Airbnb ou un nettoyage de fin de chantier, nous étudions votre besoin et vous proposons une solution adaptée.
+
+Remplissez le formulaire ou appelez-nous directement pour recevoir votre devis et planifier votre intervention rapidement. Clean Provence vous répond dans les meilleurs délais.
               </p>
 
               <div className="info-list">
