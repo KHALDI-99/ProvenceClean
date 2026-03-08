@@ -354,8 +354,8 @@ export default function App() {
           <div className="container">
             <div className="zones-top">
               <div>
-                <p className="eyebrow">Zones d'intervention</p>
-                <h2>Présents à Marseille et dans les environs/h2>
+                <p> className="eyebrow">Zones d'intervention</p>
+                <h2>Présents à Marseille et dans les environs</h2>
               </div>
               <p className="zones-copy">
                 Vous êtes à Marseille ou dans une commune proche ? Clean Provence intervient rapidement pour vos besoins de nettoyage, que vous soyez un professionnel ou un particulier. Nous couvrons Marseille et de nombreuses villes aux alentours comme Aubagne, Allauch, Plan-de-Cuques, La Valentine, Cassis, La Ciotat, Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune et d’autres communes de la région. Grâce à notre proximité, nous pouvons planifier des interventions rapides et vous proposer un service de nettoyage fiable et professionnel. Où que vous soyez autour de Marseille, vous pouvez compter sur Clean Provence pour un travail soigné et un devis rapide.
@@ -377,7 +377,7 @@ export default function App() {
               <p className="eyebrow green">Contact</p>
               <h2>Demandez votre devis GRATUIT !</h2>
               <p className="body-large">
-                ous avez besoin d’un service de nettoyage à Marseille ou dans les environs ? Contactez Clean Provence pour obtenir un devis gratuit et rapide. Que ce soit pour le nettoyage de bureaux, d’appartements, de commerces, de locations Airbnb ou un nettoyage de fin de chantier, nous étudions votre besoin et vous proposons une solution adaptée.
+                Vous avez besoin d’un service de nettoyage à Marseille ou dans les environs ? Contactez Clean Provence pour obtenir un devis gratuit et rapide. Que ce soit pour le nettoyage de bureaux, d’appartements, de commerces, de locations Airbnb ou un nettoyage de fin de chantier, nous étudions votre besoin et vous proposons une solution adaptée.
 
 Remplissez le formulaire ou appelez-nous directement pour recevoir votre devis et planifier votre intervention rapidement. Clean Provence vous répond dans les meilleurs délais.
               </p>
