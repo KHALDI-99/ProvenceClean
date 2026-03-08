@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyXm4kRRRbPboUMkowJnnQDvI_kdAIT7bXTP_UGq4uH1zFlY75l4WApmn8Rc-cQsSI-rQ/exec';
+  'https://script.google.com/macros/s/AKfycbwEsQ1ijfbtcB5FcAd3sduaH_g2X9ybLlMNerZ763SJJDR_vwHPkQdQB-rCtTmtfcJAkA/exec';
 
 type QuoteFormState = {
   nom: string;
@@ -135,7 +135,6 @@ export default function App() {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isSending, setIsSending] = useState(false);
-  const formRef = useRef<HTMLFormElement | null>(null);
 
   function handleChange(
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -144,15 +143,7 @@ export default function App() {
     setForm((current) => ({ ...current, [name]: value }));
   }
 
-  function handleIframeLoad(): void {
-    if (!isSending) return;
-    setIsSending(false);
-    setSuccessMessage('Votre demande a bien été envoyée.');
-    setErrorMessage('');
-    setForm(initialForm);
-  }
-
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
 
     const validationError = validateForm(form);
@@ -163,24 +154,54 @@ export default function App() {
       return;
     }
 
-    setErrorMessage('');
-    setSuccessMessage('');
-    setIsSending(true);
+    try {
+      setIsSending(true);
+      setErrorMessage('');
+      setSuccessMessage('');
 
-    window.setTimeout(() => {
-      formRef.current?.submit();
-    }, 50);
+      const payload = {
+        nom: form.nom.trim(),
+        telephone: form.telephone.trim(),
+        email: form.email.trim(),
+        service: form.service.trim(),
+        zone: form.zone.trim(),
+        message: form.message.trim(),
+      };
+
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const text = await response.text();
+
+      let result: { success?: boolean; error?: string } = {};
+      try {
+        result = JSON.parse(text);
+      } catch {
+        result = { success: response.ok };
+      }
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Erreur lors de l'envoi.");
+      }
+
+      setForm(initialForm);
+      setSuccessMessage('Votre demande a bien été envoyée.');
+    } catch (error) {
+      console.error(error);
+      setSuccessMessage('');
+      setErrorMessage("Une erreur est survenue lors de l'envoi du formulaire.");
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
     <div className="app-shell">
-      <iframe
-        name="hidden_iframe"
-        title="hidden_iframe"
-        style={{ display: 'none' }}
-        onLoad={handleIframeLoad}
-      />
-
       <header className="site-header">
         <div className="container nav-wrap">
           <a href="#home" className="brand">
@@ -377,14 +398,7 @@ export default function App() {
             </div>
 
             <div className="form-card">
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className="form-layout"
-                action={GOOGLE_SCRIPT_URL}
-                method="POST"
-                target="hidden_iframe"
-              >
+              <form onSubmit={handleSubmit} className="form-layout">
                 <div className="form-grid">
                   <div>
                     <label htmlFor="nom">Nom</label>
