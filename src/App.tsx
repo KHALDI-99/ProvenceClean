@@ -235,6 +235,10 @@ export default function App() {
             <a href="#zones" onClick={() => setMenuOpen(false)}>
               Zones
             </a>
+<a href="tel:+33XXXXXXXXX" style="display:block; background:#1a6fff; color:white; text-align:center; padding:16px; font-size:18px; font-weight:bold; text-decoration:none; border-radius:8px;">
+  Appeler maintenant — 06 XX XX XX XX
+</a>
+            
             <a href="#contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
               Demander un devis
             </a>
