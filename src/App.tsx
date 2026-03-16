@@ -291,6 +291,55 @@ export default function App() {
           </div>
         </section>
 
+        <section className="section section-soft">
+  <div className="container">
+
+    <div className="section-head">
+      <p className="eyebrow">Avis clients</p>
+      <h2>Ce que disent nos clients</h2>
+      <p>La satisfaction de nos clients est notre priorité. Voici quelques retours après nos interventions.</p>
+    </div>
+
+    <div className="reviews-grid">
+
+      <div className="review-card">
+        <div className="review-top">
+          <div className="review-avatar">M</div>
+          <div>
+            <strong>Marie, Marseille 13</strong>
+            <div className="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>Très professionnel, appartement impeccable après fin de chantier. Je recommande fortement.</p>
+      </div>
+
+      <div className="review-card">
+        <div className="review-top">
+          <div className="review-avatar">J</div>
+          <div>
+            <strong>Julien, Aubagne</strong>
+            <div className="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>Intervention rapide pour le nettoyage de bureaux. Travail sérieux et efficace.</p>
+      </div>
+
+      <div className="review-card">
+        <div className="review-top">
+          <div className="review-avatar">S</div>
+          <div>
+            <strong>Sophie, La Ciotat</strong>
+            <div className="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>Appartement parfaitement nettoyé pour un état des lieux. Service impeccable.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
         <section id="services" className="section">
           <div className="container">
             <div className="section-head">
