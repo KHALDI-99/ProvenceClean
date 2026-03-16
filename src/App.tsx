@@ -235,7 +235,9 @@ export default function App() {
             <a href="#zones" onClick={() => setMenuOpen(false)}>
               Zones
             </a>
-
+<a href="tel:+33784728114" className="btn btn-primary">
+  📞 Appeler maintenant
+</a>
             
             <a href="#contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
               Demander un devis
@@ -483,6 +485,9 @@ Remplissez le formulaire ou appelez-nous directement pour recevoir votre devis e
           </div>
         </div>
       </footer>
+      <a href="tel:+33784728114" className="call-button">
+  📞 Appeler
+</a>
     </div>
   );
 }
