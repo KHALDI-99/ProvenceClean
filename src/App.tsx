@@ -203,15 +203,6 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="site-header">
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17994129484"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17994129484');
-</script>
         <div className="container nav-wrap">
           <a href="#home" className="brand">
             <div className="brand-logo-wrap">
