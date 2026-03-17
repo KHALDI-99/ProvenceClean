@@ -466,87 +466,80 @@ button {
 
 /* SECTIONS */
 
-.reviews-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
-margin-top:30px;
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.review-card{
-
-background:white;
-
-border:1px solid var(--line);
-
-border-radius:24px;
-
-padding:22px;
-
-box-shadow:var(--shadow-sm);
-
-transition:0.3s;
+.review-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: 0.3s;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
-.review-card:hover{
-
-transform:translateY(-4px);
-
-box-shadow:var(--shadow-lg);
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
-.review-top{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-margin-bottom:12px;
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  min-width: 0;
 }
 
-.review-avatar{
-
-width:44px;
-
-height:44px;
-
-border-radius:50%;
-
-background:linear-gradient(135deg,var(--blue),var(--green));
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-weight:700;
+.review-top strong {
+  display: block;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
-.stars{
-
-color:#fbbf24;
-
-font-size:14px;
-
-letter-spacing:2px;
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
-.review-card p{
+.stars {
+  color: #fbbf24;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
 
-margin:0;
+.review-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
 
-color:var(--text);
+@media (max-width: 1100px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
-font-size:0.95rem;
+@media (max-width: 700px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .section {
